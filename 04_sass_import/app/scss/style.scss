@@ -1,0 +1,16 @@
+@forward "./base/index";
+@use "./util/index";
+
+header{
+  background: index.$header_bgColor;
+  padding: 1rem;
+  h1{
+    text-align: center;
+  }
+}
+
+main {
+  background: index.$main_bgColor;
+  padding: 1rem;
+}
+
