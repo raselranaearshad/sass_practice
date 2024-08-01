@@ -1,20 +1,61 @@
-# Sass @import and Partials
+# Sass @mixin and @include
+---
+## Sass Mixins
+* The `@mixin` directive lets you create CSS code that is to be reused throughout the website.
+* The `@include` directive is created to let you use (include) the mixin.
 
-Sass keeps the CSS code DRY (Don't Repeat Yourself). One way to write DRY code is to keep related code in separate files.
-
-## Sass Importing Files
-The `@import` directive allows you to include the content of one file in another.
-
-The CSS `@import` directive has a major drawback due to performance issues; it creates an extra **HTTP** request each time you call it. However, the Sass `@import` directive includes the file in the CSS; so no extra HTTP call is required at runtime!
+## Defining a Mixin
+A mixin is defined with the `@mixin` directive.
 ```SCSS
-@import "filename";
+@mixin name {
+  property: value;
+  property: value;
+}
+```
+> NOTE: A tip on hyphens and underscore in Sass: Hyphens and underscores are considered to be the same. This means that @mixin important-text { } and @mixin important_text { } are considered as the same mixin!
+
+## Using a Mixin
+The @include directive is used to include a mixin.
+```SCSS
+selector {
+  @include mixin-name;
+}
+```
+> NOTE: A mixin can also include other mixins.
+```SCSS
+@mixin special-text {
+  @include important-text;
+  @include link;
+  @include special-border;
+}
 ```
 
-## Sass Partials
-Sass transpiles all the .scss files directly. However, when you want to import a file, you do not need the file to be transpiled directly.
+## Passing Variables to a Mixin
+Mixins accept arguments. This way you can pass variables to a mixin.
+```SCSS
+  /* Define mixin with two arguments */
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
 
-Sass has a mechanism for this: If you start the filename with an **underscore**, Sass will not transpile it. Files named this way are called partials in Sass.
-### Example: 
-```SCSS 
-_colors.scss // (This file will not be transpiled directly to "colors.css")
+.myArticle {
+  @include bordered(blue, 1px);  // Call mixin with two values
+}
+
+.myNotes {
+  @include bordered(red, 2px); // Call mixin with two values
+}
+```
+## Using a Mixin For Vendor Prefixes
+Another good use of a mixin is for vendor prefixes.
+```SCSS
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.myBox {
+  @include transform(rotate(20deg));
+}
 ```
