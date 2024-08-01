@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Color Variable
+$header_bg: #000;
+$text_color: #fff;
+
+header{
+  background: $header_bg;
+}
+// This is the example of Scss Nesting
+nav{
+  ul{
+    list-style-type: none;
+  }
+  li{
+    display: inline-block;
+  }
+  a{
+    display: block;
+    padding: 15px 20px;
+    color: $text_color;
+    text-decoration: none;
+  }
+}
