@@ -1,0 +1,68 @@
+@forward "./base/index";
+@use "./util/index";
+
+header{
+  background: index.$header_bgColor;
+  padding: 1rem;
+
+  h1{
+    text-align: center;
+  }
+}
+// This is a example of Sass @extand 
+.btn{
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  color: white;
+
+}
+// This is a example of Sass Inheritance
+
+.btn_download{
+  @extend .btn;
+  background: index.$copyright_bgColor;
+}
+.btn_learnmore{
+  @extend .btn;
+  background: index.$blog_bgColor;
+}
+main {
+  background: index.$main_bgColor;
+  padding: 1rem;
+}
+// This is the example of @mixin and @include
+@mixin para-style ($size, $style, $margin) {
+  font-size: $size;
+  text-align: $style;
+  margin: $margin;
+}
+
+#education{
+  background: index.$education_bgColor;
+  padding: 1rem;
+  p{
+    @include para-style(16px, center, 10px 0)
+  }
+}
+
+#blog{
+  background: index.$blog_bgColor;
+  padding: 1rem;
+  p{
+    @include para-style(20px, justify, 15px)
+  }
+}
+
+#copyright{
+  background: index.$copyright_bgColor;
+  padding: 1rem;
+  p{
+    color: #fff;
+    text-align: center;
+  }
+}
