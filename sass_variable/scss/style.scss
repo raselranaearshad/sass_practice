@@ -1,0 +1,41 @@
+// Browser reset code
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//
+$myFont: Helvetica, sans-serif;
+
+// Color Variable
+$header_bgcolor: #ffab73;
+$main_bgcolor: #ffd384;
+$footer_bgcolor: #ffaec0;
+
+// Font Variable
+$para_fontsize: 18px;
+
+body{
+  font-family: $myFont;
+}
+header{
+  background: $header_bgcolor;
+  h1{
+    $myColor: #fff;
+    color: $myColor;
+    text-align: center;
+  }
+}
+main{
+  background: $main_bgcolor;
+}
+#about p{
+  font-size: $para_fontsize;
+}
+
+footer{
+  background: $footer_bgcolor;
+  p{
+    font-size: $para_fontsize;
+  }
+}
