@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// Sass Partials
+@import './scss-components/variables';
+@import './scss-components/navbar';
+
+
+body{
+  background-color: $body-bg;
+}
+
+// SCSS Nesting 
+.header{
+  background-color: $header-bg;
+  width: 1000px;
+  margin: 0 auto;
+}
