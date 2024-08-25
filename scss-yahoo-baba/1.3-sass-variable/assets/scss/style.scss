@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+// Variable in SCSS 
+$primary-color: crimson;
+$highlight-font-color: purple;
+$paragraph-font-color: white;
+
+
+body{
+  background-color: $primary-color;
+}
+
+h1{
+  margin-top: 80px;
+  text-align: center;
+  font-size: 45px;
+  color: $paragraph-font-color;
+  span{
+    color: $highlight-font-color;
+    font-weight: 900;
+  }
+}
+P{
+  text-align: center;
+  font-size: 18px;
+  color: $paragraph-font-color;
+  padding-top: 24px;
+  max-width: 50%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
