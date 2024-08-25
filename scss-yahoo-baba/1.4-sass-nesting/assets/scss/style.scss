@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// Variables 
+$header-bg: white;
+$body-bg: crimson;
+$nav-bg: mediumpurple;
+
+body{
+  background-color: $body-bg;
+}
+
+// SCSS Nesting 
+.header{
+  background-color: $header-bg;
+  width: 1000px;
+  margin: 0 auto;
+  .navbar {
+    background-color: $nav-bg;
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li{
+        display: inline-block;
+        &:hover{
+          background-color: green;
+        }
+        a{
+          color: #fff;
+          font-size: 20px;
+          display: block;
+          text-decoration: none;
+          padding: 10px 12px;
+          transition: .3s;
+        }
+      }
+    }
+  }
+}
