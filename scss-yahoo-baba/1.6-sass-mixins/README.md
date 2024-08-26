@@ -1,25 +1,64 @@
-# Sass Partials
+# Sass @mixin & @include
 ***
-### What are Sass Partials?
-Sass partials are small Sass files that contain a portion of your CSS. They are typically used to break down your styles into manageable pieces, making it easier to maintain and organize your code. Partials are defined in separate files and are imported into a main stylesheet.
 
-### Naming Convention
+In Sass (Syntactically Awesome Style Sheets), `@mixin` and `@include` are powerful directives that allow you to create reusable styles. 
 
-Partials are usually named with a leading underscore `_`. The underscore indicates that the file is a partial and should not be compiled into a standalone CSS file.
+This helps keep your stylesheets DRY `(Don't Repeat Yourself)` and makes your code more maintainable.
 
-### Importing Partials
-To use a partial in your main Sass file, you can use the @import directive. For example:
+## Benefits of Using Mixins
+* **Reusability:** You can define styles once and reuse them across multiple selectors.
+* **Maintainability:** If you need to change a style, you only have to do it in one place.
+* **Flexibility:** You can pass parameters to mixins to customize styles as needed.
+
+### @mixin & @include systex:
+@mixin Syntex:
 ```scss
-@import 'buttons';
-@import 'variables';
+@mixin mixin-name ($agrument1, $argument2){
+  // write your code here 
+}
 ```
-When you compile your main Sass file (e.g., styles.scss), all the imported partials will be included in the final CSS output.
+@include Syntex:
+```scss
+.button-primary {
+  // Argument value will be px, color etc.
+  @include mixin-name (argument-value1, argument-value2);
+}
+```
+## @mixin
+The `@mixin` directive is used to define a block of styles that can be reused throughout your stylesheet. You can also pass `arguments` to a mixin to make it more flexible.
 
-### Benefits of Using Partials
-* **Modularity:** Partials allow you to break your styles into smaller, reusable components, making your codebase more organized.
+### Example:
+```scss
+// Create a @mixin
+@mixin button($color, $padding: 10px) {
+  background-color: $color;
+  color: white;
+  padding: $padding;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 
-* **Maintainability:** Smaller files are easier to manage and update. You can focus on specific components without navigating through a large stylesheet.
+  &:hover {
+    opacity: 0.8;
+  }
+}
+```
 
-* **Reusability:** You can reuse partials across different projects or stylesheets, promoting consistency and reducing duplication.
+In this example, we define a `mixin` called **button** that takes two parameters: `$color` and `$padding`. The `$padding` parameter has a default value of 10px.
 
-* **Collaboration:** In a team environment, multiple developers can work on different partials simultaneously without causing merge conflicts in a single large file.
+## @include
+The `@include` directive is used to include the styles defined in a mixin within a selector.
+
+### Example:
+```scss
+.button-primary{
+  @include button (blue);
+}
+.button-secondary{
+  @include button (green, 15px);
+}
+.button-danger{
+  @include button (red, 20px);
+}
+```
+In this example, we create three classes, `.button-primary`, `.button-secondary` and `.button-danger`. The `.button-primary` class uses the button mixin with the color `blue`, while the .`button-secondary` class uses the mixin with the color green and a custom padding of 15px.

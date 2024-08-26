@@ -1,0 +1,11 @@
+@mixin bd-radius ($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin box-shadow($top, $left, $blue, $color){
+  -webkit-box-shadow: $top $left $blue $color;
+  -moz-box-shadow: $top $left $blue $color;
+  box-shadow: $top $left $blue $color;
+}
