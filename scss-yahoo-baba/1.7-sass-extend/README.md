@@ -1,25 +1,34 @@
-# Sass Partials
+# Sass @extend Directive
 ***
-### What are Sass Partials?
-Sass partials are small Sass files that contain a portion of your CSS. They are typically used to break down your styles into manageable pieces, making it easier to maintain and organize your code. Partials are defined in separate files and are imported into a main stylesheet.
+The `@extend` directive in Sass is a powerful feature that allows you to share styles between selectors. It helps to keep your CSS DRY `(Don't Repeat Yourself)` by allowing one selector to inherit the styles of another.
 
-### Naming Convention
+## Key Points
+* **Inheritance:** When you use @extend, the styles of the extended selector are included in the extending selector. This means that if you change the styles of the base class, all classes that extend it will automatically inherit those changes.
+* **Selector Grouping:** The resulting CSS will group selectors that share the same styles, which can help reduce the size of your CSS file.
+* **Limitations:**
+  * You cannot extend multiple selectors at once.
+  * Extending a selector that is not a class (like an ID or element selector) can lead to unexpected results.
+  * Be cautious with @extend in large projects, as it can lead to complex CSS selectors that may be hard to debug.
 
-Partials are usually named with a leading underscore `_`. The underscore indicates that the file is a partial and should not be compiled into a standalone CSS file.
-
-### Importing Partials
-To use a partial in your main Sass file, you can use the @import directive. For example:
+##  Example with Placeholder Selectors
+You can also use `@extend` with placeholder selectors (using `%`), which are **not compiled** into CSS unless they are extended:
 ```scss
-@import 'buttons';
-@import 'variables';
+// Define a placeholder
+%button-styles {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+// Extend the placeholder
+.primary-button {
+  @extend %button-styles;
+  background-color: green;
+}
+
+.secondary-button {
+  @extend %button-styles;
+  background-color: red;
+}
 ```
-When you compile your main Sass file (e.g., styles.scss), all the imported partials will be included in the final CSS output.
-
-### Benefits of Using Partials
-* **Modularity:** Partials allow you to break your styles into smaller, reusable components, making your codebase more organized.
-
-* **Maintainability:** Smaller files are easier to manage and update. You can focus on specific components without navigating through a large stylesheet.
-
-* **Reusability:** You can reuse partials across different projects or stylesheets, promoting consistency and reducing duplication.
-
-* **Collaboration:** In a team environment, multiple developers can work on different partials simultaneously without causing merge conflicts in a single large file.
