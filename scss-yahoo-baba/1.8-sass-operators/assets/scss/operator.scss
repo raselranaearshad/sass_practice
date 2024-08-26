@@ -1,0 +1,9 @@
+// Sass Equal Operators
+.abc {
+  // "==" equal to example 
+  padding: 22px == 10px;
+}
+.efg {
+  // "!=" not equal to example
+  margin: (10px 21px 24px) != (10px 21px 23px);
+}
