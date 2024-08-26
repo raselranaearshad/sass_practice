@@ -1,4 +1,4 @@
-// Sass Equal Operators
+// Sass Equality Operators
 .abc {
   // "==" equal to example 
   padding: 22px == 10px;
@@ -6,4 +6,22 @@
 .efg {
   // "!=" not equal to example
   margin: (10px 21px 24px) != (10px 21px 23px);
+}
+
+// Sass Relational Operators
+.ab{
+  // < less than to the second's 
+  margin: 10 < 11;
+}
+.ef{
+  // <= less than or equal to 
+  margin: 21px <= 22px;
+}
+.cd {
+  // > greater than to the second's 
+  padding: 20px > 30px;
+}
+.gh{
+  // >= greater than equal to
+  padding: 1500ms >= 2s;
 }
