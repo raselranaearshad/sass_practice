@@ -25,3 +25,44 @@
   // >= greater than equal to
   padding: 1500ms >= 2s;
 }
+
+// Sass Boolean Operators
+.ij{
+  // not returns the opposite of the expression’s value
+  margin: not 10px == 10;
+}
+.kl{
+  // or returns true if either expression’s value is true, and false if both are false.
+  @debug true or true;
+  @debug false or false;
+  margin: arial == "arial" or 10px == 10;
+}
+.mn{
+  // and returns true if both expressions’ values are true, and false if either is false.
+  @debug true and true;
+  @debug false and false;
+  padding: Helvetica == 'Helvetica' and 10 != 10px;
+}
+
+// Sass Arithmetic Operators
+$width: 100px;
+$extra: 20px;
+$reduction: 30px;
+$multiplier: 3;
+$division: 4;
+.box1{
+  // Adds two numbers
+  width: $width + $extra;
+}
+.box2{
+  // Subtracts one number from another 
+  width: $width - $reduction;
+}
+.box3{
+  // Multiplies two numbers
+  width: $width * $multiplier;
+}
+.box4{
+  // Divides one number by anothe
+  width: calc($width / $division);
+}
