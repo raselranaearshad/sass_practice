@@ -66,3 +66,10 @@ $division: 4;
   // Divides one number by anothe
   width: calc($width / $division);
 }
+
+// Sass String Operator
+$first-name: "John";
+$last-name: "Deu";
+.full-name {
+  content: $first-name + " " + $last-name;
+}
