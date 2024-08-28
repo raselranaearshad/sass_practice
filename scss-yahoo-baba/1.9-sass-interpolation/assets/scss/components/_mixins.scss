@@ -1,0 +1,22 @@
+@mixin bd-radius ($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin box-shadow($top, $left, $blue, $color){
+  -webkit-box-shadow: $top $left $blue $color;
+  -moz-box-shadow: $top $left $blue $color;
+  box-shadow: $top $left $blue $color;
+}
+
+@mixin margin ($position, $unit){
+  // Sass Interpolation Example:
+  margin-#{$position} : $unit + px;
+}
+
+@mixin set-icon ($name){
+  .icon-#{$name}{
+    background-image: url("../icons/#{$name}.png");
+  }
+}

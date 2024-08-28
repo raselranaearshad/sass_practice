@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import './components/mixins';
+
+%extend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 15px;
+  margin: 0 0 15px 15px;
+}
+
+#first {
+  @extend %extend;
+  width: 250px;
+  background-color: #474290;
+  @include bd-radius(5px);
+  @include box-shadow (5px, 3px, 10px, black);
+} 
+#second {
+  @extend %extend;
+  width: 400px;
+  background-color: #8db58f;
+  @include bd-radius(10px);
+  @include box-shadow (8px, 5px, 10px, red);
+}
+
+#third {
+  @extend %extend;
+  width: 600px;
+  background-color: #fa7ab2;
+  @include bd-radius(15px);
+  @include box-shadow(10px, 6px, 10px, purple);
+}
+//  

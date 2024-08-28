@@ -1,4 +1,4 @@
-# Sass @extend Directive
+# Sass Operators
 ### 1. Arithmetic Operators
 Sass supports basic arithmetic operations:
 

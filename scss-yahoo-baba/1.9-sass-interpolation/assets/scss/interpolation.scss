@@ -1,0 +1,7 @@
+@import './components/mixins';
+
+.test {
+  @include margin (bottom, 50)
+};
+
+@include set-icon (duck);
