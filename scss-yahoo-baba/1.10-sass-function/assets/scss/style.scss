@@ -41,17 +41,30 @@ $container-width: 1500;
 }
 //  
 
-// Half width function use
+// Sass Functions Practice
 .half-width {
   width: half($container-width);
 }
+// Usages of Custom Functions
 .one-third-width {
   width: one-third($container-width);
 }
 .one-fourth-width {
   width: one-fourth($container-width);
 }
-
+// Usages of Color Function
 .darken-button {
   background-color: darken-color(#3469db, 10%);
 }
+// Usages of Sass Number Functions(nf)
+.nf-test1 {margin: abs(-10px);} // Create absolute value
+.nf-test2 {margin: ceil(4.5px);} // Create up values
+.nf-test3{margin: floor(3.9px);} // Create down value
+.nf-test4{margin: round(5.8px);}  // Create up/down if value will be lower then .5 then create down value & if value will be higher then .5 then create up values. 
+.nf-test5{margin: max(1px, 5px, 10px);} // Return  maximum value.
+.nf-test6{margin: min(4px, 1px, 39px);} // Return minimum value.
+.nf-test7{margin: percentage(calc(100 / 50));} // Return percentage value.
+.nf-test8{margin: comparable(10px, 20px);} // Return (true) if the value is comparable / Return (false) if the value is uncomparable.
+.nf-test9{content: random(100);} // Return a random number between (0 to 100).
+.nf-test10{content: unit(20rem);} // Return unit names.
+.nf-test11{content: unitless(100);} // Return (true) if we don't give any unit with our number value / Return (false) if we give any unit name with our number value.

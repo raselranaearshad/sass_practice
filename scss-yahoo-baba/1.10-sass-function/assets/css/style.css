@@ -60,4 +60,48 @@
   background-color: #2152bb;
 }
 
+.nf-test1 {
+  margin: 10px;
+}
+
+.nf-test2 {
+  margin: 5px;
+}
+
+.nf-test3 {
+  margin: 3px;
+}
+
+.nf-test4 {
+  margin: 6px;
+}
+
+.nf-test5 {
+  margin: 10px;
+}
+
+.nf-test6 {
+  margin: 1px;
+}
+
+.nf-test7 {
+  margin: 200%;
+}
+
+.nf-test8 {
+  margin: true;
+}
+
+.nf-test9 {
+  content: 58;
+}
+
+.nf-test10 {
+  content: "rem";
+}
+
+.nf-test11 {
+  content: true;
+}
+
 /*# sourceMappingURL=style.css.map */
