@@ -37,7 +37,7 @@ $base-color: brown;
   background-color: desaturate($base-color, 60);
 }
 #seventh {
-  background-color: mix($base-color , yellow, 50);
+  background-color: mix($base-color , yellow, 50%);
 }
 #eighth {
   background-color: transparentize($base-color, .7);

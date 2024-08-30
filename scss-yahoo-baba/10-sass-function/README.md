@@ -127,14 +127,45 @@ Generates a **unique** CSS identifier.
 ```
 
 ## A Color Manipulation Function
-You can use Sass functions to manipulate colors. For example, you could create a function that darkens a color by a certain percentage:
+Sass **(Syntactically Awesome Style Sheets)** provides a set of powerful color functions that allow you to manipulate and adjust colors in various ways. 
+### 1. arken($color, $amount)
+Decreases the lightness of a color, making it **darker**.
 ```scss
-@function darken-color ($color, $amount) {
-  @return darken($color, $value);
-}
-// Usage
-.button {
-  background-color: darken-color(#3498db, 10%);
-  // This will output a darker shade of blue
-}
+$base-color: #3498db; // A shade of blue
+$darker-color: darken($base-color, 10%); // Darkens the color by 10%
+```
+### 2. lighten($color, $amount)
+Increases the lightness of a color, making it **lighter**.
+```scss
+$lighter-color: lighten($base-color, 10%); // Lightens the color by 10%
+```
+### 3. adjust-hue($color, $degrees)
+Changes the hue of a color by a specified degree.
+```scss
+$new-hue-color: adjust-hue($base-color, 45deg); // Adjusts hue by 45 degrees
+```
+### 4. saturate($color, $amount)
+Increases the saturation of a color, making it more **vivid**.
+```scss
+$saturated-color: saturate($base-color, 20%); // Increases saturation by 20%
+```
+### 5. desaturate($color, $amount)
+Decreases the saturation of a color, making it more **muted**.
+```scss
+$desaturated-color: desaturate($base-color, 20%); // Decreases saturation by 20%
+```
+### 6. rgba($color, $alpha)
+Converts a color to an rgba color with a specified alpha (opacity) level.
+```scss
+$transparent-color: rgba($base-color, 0.5); // Sets 50% opacity
+```
+### 7. mix($color1, $color2, $weight)
+Mixes two colors together in a specific proportion.
+```scss
+$mixed-color: mix($color1, $color2, 50%); // Mixes colors evenly
+```
+### 8. transparentize($color, $amount) / fade-out($color, $amount)
+Decreases the opacity of a color.
+```scss
+$transparent-color: transparentize($base-color, 0.3); // Makes color 30% more transparent
 ```
