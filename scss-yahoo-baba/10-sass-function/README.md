@@ -78,6 +78,54 @@ Returns whether two numbers can be compared. Two numbers are comparable if they 
 .test{content: comparable(10px, 5px)} // Return true
 ```
 
+## Sass String Functions
+Sass **(Syntactically Awesome Style Sheets)** provides several string functions that can help you manipulate and format strings in your stylesheets. 
+### 1. quote($string)
+Adds **quotes** around a string.
+```scss
+.test{content: quote(hello world)} // Return "hello world"
+```
+### 2. unquote($string)
+**Removes quotes** from a string.
+```scss
+.test{content: unquote("Hello World")} // Return Hello World
+```
+### 3. str-length($string)
+Returns the **number of characters** in a string.
+```scss
+.test{content: str-length("Hello World")} // Return index number 11
+```
+### 4. str-insert($string, $insert, $index)
+**Inserts a substring** into a string at a specified index.
+```scss
+.test{content: str-insert("Hello World", " Beautiful", 7)} // Return Hello Beautiful World
+```
+### 5. str-index($string, $substring)
+Returns the **index** of the first occurrence of a substring within a string. Returns null if the substring is not found.
+```scss
+.test{content: str-index("Hello World", "World")} // Return 7
+```
+### 6. str-slice($string, $start-at, [$end-at])
+**Extracts** a substring from a string, starting at a specified index. Optionally, you can specify an end index.
+```scss
+.test{content: str-slice("hello world", 1, 5)}; // "hello"
+```
+### 7. to-upper-case($string)
+Converts all characters in a string to **uppercase**.
+```scss
+.test{content: to-upper-case("hello world")} // Return HELLO WORLD  
+```
+### 8. to-lower-case($string)
+Converts all characters in a string to **lowercase**.
+```scss
+.test{content: to-upper-case("Hello World")} // Return hello world
+```
+### 9. unique-id()
+Generates a **unique** CSS identifier.
+```scss
+.test{content: unique-id()} // Return an unique id
+```
+
 ## A Color Manipulation Function
 You can use Sass functions to manipulate colors. For example, you could create a function that darkens a color by a certain percentage:
 ```scss
