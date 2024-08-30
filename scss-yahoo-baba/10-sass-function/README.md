@@ -126,7 +126,7 @@ Generates a **unique** CSS identifier.
 .test{content: unique-id()} // Return an unique id
 ```
 
-## A Color Manipulation Function
+## Sass Color Functions
 Sass **(Syntactically Awesome Style Sheets)** provides a set of powerful color functions that allow you to manipulate and adjust colors in various ways. 
 ### 1. arken($color, $amount)
 Decreases the lightness of a color, making it **darker**.
