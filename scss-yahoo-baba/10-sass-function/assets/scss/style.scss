@@ -88,3 +88,16 @@ $base-color: brown;
 .sf-test7{content: str-insert("Helvetica Neue", " Mono" , 10);} // Insert a new value in existing string
 .sf-test8{font-family: str-slice("Helvetica Neue", 10, -1);} // Return slice value from string
 .sf-test9{content: unique-id();} // return an unique id
+
+// Sass List Functions (lf)
+$list: 10px, 20px, 30px;
+$list2: 40px 50px 60px;
+.lf-test1 {content: length($list);} // Returns the number of items in a list.
+.lf-test2 {content: nth($list, 2)} // Returns the nth item in a list.
+.lf-test3 {content: set-nth($list, 2 , 2rem)} // Replaces the nth item in a list with a new value.
+.lf-test4{content: join($list, $list2, auto);} // Combines two lists into one
+.lf-test5{content: append($list, 70px 80px , space);} // Adds a new value to the end of a list.
+.lf-test6{content: zip($list, $list2);} // Combines several lists into a single list of sub-lists, where each sub-list contains the nth items from each of the original lists.
+.lf-test7{content: index($list, 20px);} // Returns the index of the first occurrence of a value in a list.
+.lf-test8{content: list-separator($list2);} // Returns the separator used in the list (comma, space, or slash).
+.lf-test9{content: is-bracketed($list);} // Returns whether a list is enclosed in square brackets.
