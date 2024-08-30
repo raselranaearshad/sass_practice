@@ -68,3 +68,14 @@ $container-width: 1500;
 .nf-test9{content: random(100);} // Return a random number between (0 to 100).
 .nf-test10{content: unit(20rem);} // Return unit names.
 .nf-test11{content: unitless(100);} // Return (true) if we don't give any unit with our number value / Return (false) if we give any unit name with our number value.
+
+// Sass String Functions (sf)
+.sf-test1{font-family: quote(Arial);} // Return qoute value
+.sf-test2{font-family: unquote("Roboto");} // Return unqoute value
+.sf-test3{content: to-lower-case("HELLO LOWERCASE");} // Return lowercase value 
+.sf-test4{content: to-upper-case("Hello Upercase");} // Return upercase value
+.sf-test5{content: str-length("What is my string length");} // Return string length
+.sf-test6{content: str-index("Halvetica Neue", "N");} // Return string index number {Case Sensitive}
+.sf-test7{content: str-insert("Helvetica Neue", " Mono" , 10);} // Insert a new value in existing string
+.sf-test8{font-family: str-slice("Helvetica Neue", 10, -1);} // Return slice value from string
+.sf-test9{content: unique-id();} // return an unique id
