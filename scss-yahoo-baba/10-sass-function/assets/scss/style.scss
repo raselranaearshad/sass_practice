@@ -1,11 +1,13 @@
 *{
-  margin: 0;
+  margin: 5px;
   padding: 0;
   box-sizing: border-box;
 }
 
 // Custom Variables
 $container-width: 1500;
+// Color Variables
+$base-color: brown;
 
 @import './components/functions';
 @import './components/mixins';
@@ -16,28 +18,35 @@ $container-width: 1500;
   padding: 15px;
   margin: 0 0 15px 15px;
 }
-
 #first {
-  @extend %extend;
-  width: 250px;
-  background-color: #474290;
-  @include bd-radius(5px);
-  @include box-shadow (5px, 3px, 10px, black);
-} 
-#second {
-  @extend %extend;
-  width: 400px;
-  background-color: #8db58f;
-  @include bd-radius(10px);
-  @include box-shadow (8px, 5px, 10px, red);
+  background-color: $base-color;
 }
-
+#second {
+  background-color: darken($base-color, 10);
+}
 #third {
-  @extend %extend;
-  width: 600px;
-  background-color: #fa7ab2;
-  @include bd-radius(15px);
-  @include box-shadow(10px, 6px, 10px, purple);
+  background-color: lighten($base-color, 50);
+}
+#fourth {
+  background-color: adjust-hue($base-color, 50);
+}
+#fifth {
+  background-color: saturate($base-color, 30);
+}
+#sixth {
+  background-color: desaturate($base-color, 60);
+}
+#seventh {
+  background-color: mix($base-color , yellow, 50);
+}
+#eighth {
+  background-color: transparentize($base-color, .7);
+}
+#first, #second, #third, #fourth, #fifth, #sixth, #seventh, #eighth {
+  width: 400px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
 }
 //  
 

@@ -1,1 +1,142 @@
-*{margin:0;padding:0;box-sizing:border-box}#third,#second,#first{font-family:Arial,Helvetica,sans-serif;font-size:16px;padding:15px;margin:0 0 15px 15px}#first{width:250px;background-color:#474290;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:5px 3px 10px #000;-moz-box-shadow:5px 3px 10px #000;box-shadow:5px 3px 10px #000}#second{width:400px;background-color:#8db58f;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-box-shadow:8px 5px 10px red;-moz-box-shadow:8px 5px 10px red;box-shadow:8px 5px 10px red}#third{width:600px;background-color:#fa7ab2;-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;-webkit-box-shadow:10px 6px 10px purple;-moz-box-shadow:10px 6px 10px purple;box-shadow:10px 6px 10px purple}.half-width{width:750px}.one-third-width{width:500px}.one-fourth-width{width:375px}.darken-button{background-color:#2152bb}.nf-test1{margin:10px}.nf-test2{margin:5px}.nf-test3{margin:3px}.nf-test4{margin:6px}.nf-test5{margin:10px}.nf-test6{margin:1px}.nf-test7{margin:200%}.nf-test8{margin:true}.nf-test9{content:39}.nf-test10{content:"rem"}.nf-test11{content:true}.sf-test1{font-family:"Arial"}.sf-test2{font-family:Roboto}.sf-test3{content:"hello lowercase"}.sf-test4{content:"HELLO UPERCASE"}.sf-test5{content:24}.sf-test6{content:11}.sf-test7{content:"Helvetica Mono Neue"}.sf-test8{font-family:" Neue"}.sf-test9{content:ufe9uww}/*# sourceMappingURL=style.css.map */
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#first {
+  background-color: brown;
+}
+
+#second {
+  background-color: #7c2020;
+}
+
+#third {
+  background-color: #f5d9d9;
+}
+
+#fourth {
+  background-color: #a5912a;
+}
+
+#fifth {
+  background-color: #c40b0b;
+}
+
+#sixth {
+  background-color: #686868;
+}
+
+#seventh {
+  background-color: #d29515;
+}
+
+#eighth {
+  background-color: rgba(165, 42, 42, 0.3);
+}
+
+#first, #second, #third, #fourth, #fifth, #sixth, #seventh, #eighth {
+  width: 400px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+}
+
+.half-width {
+  width: 750px;
+}
+
+.one-third-width {
+  width: 500px;
+}
+
+.one-fourth-width {
+  width: 375px;
+}
+
+.darken-button {
+  background-color: #2152bb;
+}
+
+.nf-test1 {
+  margin: 10px;
+}
+
+.nf-test2 {
+  margin: 5px;
+}
+
+.nf-test3 {
+  margin: 3px;
+}
+
+.nf-test4 {
+  margin: 6px;
+}
+
+.nf-test5 {
+  margin: 10px;
+}
+
+.nf-test6 {
+  margin: 1px;
+}
+
+.nf-test7 {
+  margin: 200%;
+}
+
+.nf-test8 {
+  margin: true;
+}
+
+.nf-test9 {
+  content: 77;
+}
+
+.nf-test10 {
+  content: "rem";
+}
+
+.nf-test11 {
+  content: true;
+}
+
+.sf-test1 {
+  font-family: "Arial";
+}
+
+.sf-test2 {
+  font-family: Roboto;
+}
+
+.sf-test3 {
+  content: "hello lowercase";
+}
+
+.sf-test4 {
+  content: "HELLO UPERCASE";
+}
+
+.sf-test5 {
+  content: 24;
+}
+
+.sf-test6 {
+  content: 11;
+}
+
+.sf-test7 {
+  content: "Helvetica Mono Neue";
+}
+
+.sf-test8 {
+  font-family: " Neue";
+}
+
+.sf-test9 {
+  content: uj6yto1;
+}
+
+/*# sourceMappingURL=style.css.map */
