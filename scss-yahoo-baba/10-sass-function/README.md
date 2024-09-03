@@ -225,3 +225,18 @@ The `is-superselector()` function checks if one selector is a superselector of a
 $is_super: is-superselector('.parent', '.parent .child');
 // Return : This would return true because .parent is a superselector of .parent .child.
 ```
+
+## Sass Map Functions
+Sass **maps** are a powerful feature that allows you to store pairs of keys and values, similar to dictionaries in other programming languages.
+
+![Map Functions](./assets/img/map-functions.png)
+They are particularly useful for managing complex collections of **variables**, such as **theme colors**, **font sizes**, or **breakpoints**.
+
+### Key Function for Working with Sass Maps
+* `map-get($map, $key)`: Retrieves the value associated with a specific key in the map.
+* `map-merge($map1, $map2)`: Combines two maps into a new map.
+> NOTE:  If both maps have the same key, the value from the second map will overwrite the value from the first map.
+* `map-remove($map, $key...)`: Removes one or more keys from the map.
+* `map-keys($map)`: Returns a list of all keys in the map.
+* `map-values($map)`: Returns a list of all values in the map.
+* `map-has-key($map, $key)`: Checks if a map contains a specific key.
