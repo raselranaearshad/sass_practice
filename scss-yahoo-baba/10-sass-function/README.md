@@ -172,6 +172,8 @@ $transparent-color: transparentize($base-color, 0.3); // Makes color 30% more tr
 
 ## Sass Selector Functions
 The `selector` function in Sass is used to manipulate and work with selectors in CSS. It provides ways to split, append, or manipulate selectors in your stylesheets.
+
+![Selector Functions](assets/img/sass-selector-functions.png)
 ### Basic Usage of `selector` Functions
 1. `selector-nest()`: Nests selectors together as if they were written in a nested Sass block.
 2. `selector-append()`: Appends one or more selectors to the end of another selector.
