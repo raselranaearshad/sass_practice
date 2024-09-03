@@ -133,3 +133,27 @@ $selector6: selector-extend(".abc .info", ".info", ".content nav.sidebar");
 #{$selector6}{
   margin-top: 20px;
 }
+
+// Sass Map Functions
+$font-weight: ("normal": 400, "medium": 500, "semibold": 600);
+$light-weight: ('lightest': 100, 'light': 300);
+$map-merge: map-merge($light-weight, $font-weight );
+$map-remove: map-remove($font-weight, "semibold");
+.mf-test1{
+  font-weight: map-get($font-weight, medium)
+}
+.mf-test2{
+  font-weight: map-keys($font-weight);
+}
+.mf-test3{
+  font-weight: map-values($font-weight);
+}
+.mf-test4{
+  font-weight: map-values($map-merge);
+}
+.mf-test5{
+  font-weight: map-keys($map-remove);
+}
+.mf-test6{
+  font-weight: map-has-key($font-weight, "medium");
+}
