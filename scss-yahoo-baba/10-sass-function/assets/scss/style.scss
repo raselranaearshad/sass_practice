@@ -101,3 +101,35 @@ $list2: 40px 50px 60px;
 .lf-test7{content: index($list, 20px);} // Returns the index of the first occurrence of a value in a list.
 .lf-test8{content: list-separator($list2);} // Returns the separator used in the list (comma, space, or slash).
 .lf-test9{content: is-bracketed($list);} // Returns whether a list is enclosed in square brackets.
+
+// Sass Selector Functions
+$selector: selector-nest("ul", "li");
+$selector2: selector-append(".abc", "_copy, _images");
+$selector3: selector-replace("a.abc",".abc",".link");
+$selector4: simple-selectors("a.abc");
+$selector5: selector-unify(".active a", ".main a");
+$selector6: selector-extend(".abc .info", ".info", ".content nav.sidebar");
+// Selector Nest Function
+#{$selector}{
+  width: 10px;
+}
+// Selector Append Function 
+#{$selector2}{
+  width: 20px;
+}
+// Selector Replace Function
+#{$selector3}{
+  text-decoration: none;
+}
+// Simple Selectors Function
+#{$selector4}{
+  width: 30px;
+}
+// Selector Unify Function
+#{$selector5}{
+  width: 55px;
+}
+// Selector Extend Function
+#{$selector6}{
+  margin-top: 20px;
+}
