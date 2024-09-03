@@ -240,3 +240,6 @@ They are particularly useful for managing complex collections of **variables**, 
 * `map-keys($map)`: Returns a list of all keys in the map.
 * `map-values($map)`: Returns a list of all values in the map.
 * `map-has-key($map, $key)`: Checks if a map contains a specific key.
+
+## Sass Inrospection Functions
+![Introspection Functions](./assets/img/introspections-function.png)
