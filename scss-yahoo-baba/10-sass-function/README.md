@@ -169,3 +169,57 @@ Decreases the opacity of a color.
 ```scss
 $transparent-color: transparentize($base-color, 0.3); // Makes color 30% more transparent
 ```
+
+## Sass Selector Functions
+The `selector` function in Sass is used to manipulate and work with selectors in CSS. It provides ways to split, append, or manipulate selectors in your stylesheets.
+### Basic Usage of `selector` Functions
+1. `selector-nest()`: Nests selectors together as if they were written in a nested Sass block.
+2. `selector-append()`: Appends one or more selectors to the end of another selector.
+3. `selector-extend()`: Extends a selector using another selector (similar to @extend).
+4. `selector-replace()`: Replaces a selector with another selector within a given selector list.
+5. `selector-unify()`: Unifies two selectors, combining them if possible.
+6. `simple-selectors()`: Returns a list of simple selectors within a compound selector.
+7. `is-superselector()`: Returns whether a selector is a superselector of another selector.
+
+### 1. selector-nest()
+The `selector-nest()` function takes multiple selectors and nests them as you would in a Sass block.
+```scss
+$nested: selector-nest(".parent-element", ".child-element");
+// Return : .parent-element .child-element{}
+```
+### 2. selector-append()
+The `selector-append()` function adds additional selectors to the end of an existing selector.
+```scss
+$append: selector-append(".btn", ":hover");
+// Return : .btn:hover{}
+```
+### 3. selector-extend()
+The `selector-extend()` function extends a selector with another selector.
+```scss
+$extend: selector-extend(".base",".new");
+// Return : .new, .base {} 
+```
+### 4. selector-replace()
+The `selector-replace()` function replaces a part of a selector with another selector.
+```scss
+$replaced: selector-replace('.old .child', '.child', '.new');
+// Return : .old .new {}
+```
+### 5. selector-unify()
+The `selector-unify()` function combines two selectors if possible.
+```scss
+$unified: selector-unify('.foo', '.bar');
+// Return : .foo.bar{}
+```
+### 6. simple-selectors()
+The `simple-selectors()` function returns a list of simple selectors from a compound selector.
+```scss
+$simple: simple-selectors('.foo.bar.baz');
+// Return : .foo, .bar, .baz {}
+```
+### 7. is-superselector()
+The `is-superselector()` function checks if one selector is a superselector of another.
+```scss
+$is_super: is-superselector('.parent', '.parent .child');
+// Return : This would return true because .parent is a superselector of .parent .child.
+```
