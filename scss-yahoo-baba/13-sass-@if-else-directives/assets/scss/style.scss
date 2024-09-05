@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container{
+  width: 1100px;
+  margin: 0px auto;
+}
+
+
+// Sass @if directive
+$test: 3;
+
+p {
+  @if $test < 5 {
+    color: red;
+  }
+  @if 1 + 1 == 2 {
+    font-size: 12px;
+  }
+  @if 10 > 8 {
+    font-weight: bold;
+  }
+}
+
+
+// Sass @else directive
+$else-test: 4;
+
+.else {
+  @if $else-test <= 3 {
+    color: blue;
+    font-size: 20px;
+  } @else if $else-test == 4 {
+    color: green;
+    font-size: 24px;
+  } @else {
+    color: rebeccapurple;
+    font-size: 18px;
+  }
+}
+
+// Sass @mixin with @if @else directive
+
+@mixin changeColor($value) {
+  @if $value > 0 and $value < 10 {
+    background-color: red;
+  } @else if $value > 10 and $value < 20 {
+    background-color: green;
+  } @else if $value > 20 and $value < 30 {
+    background-color: purple;
+  } @else {
+    background-color: blue;
+  }
+}
+
+
+.mc-test {
+  @include changeColor(24);
+}
