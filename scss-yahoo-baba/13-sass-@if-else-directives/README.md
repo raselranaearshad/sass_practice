@@ -1,61 +1,57 @@
-## Sass `@media` Directive
-The `@media` directive in Sass is similar to the standard CSS `@media` rule, which is used for applying styles based on certain conditions like screen size, orientation, etc.
+# Sass @if & @else Directives
+The `@if` and `@else` directives in Sass are used to control conditional logic within your stylesheets. These directives allow you to write code that behaves differently based on specific conditions.
+
+### Basic Syntax of @if
+The `@if` directive works similarly to conditionals in programming languages. It checks if a given condition is true, and if so, it executes the corresponding block of code.
 ```scss
-.container {
-  width: 100%;
-  
-  @media (min-width: 768px) {
-    width: 750px;
-  }
-
-  @media (min-width: 992px) {
-    width: 970px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 1170px;
-  }
+@if condition {
+  // code to be executed if condition is true
 }
-
 ```
-
-### Explanation:
-
-* The `.container` class will have different widths depending on the screen size.
-* Sass compiles this into separate media queries, resulting in a clean and organized CSS file.
-
-## Sass `@at-root` Directive
-The `@at-root` directive is used to break out of the current nesting level and output the CSS at the root level. 
-
-This is useful when you want to control where a piece of CSS is placed in the final output, regardless of the nested structure in your Sass file.
-
+### Example of @if
 ```scss
-.parent {
-  color: blue;
-  
-  .child {
-    color: red;
-    
-    @at-root .another-child {
-      color: green;
+$primary-color: blue;
+  @if $primary-color == blue {
+    body {
+      background-color: blue;
     }
   }
-}
-
+/* In this example, if the $primary-color is blue, the background color of the body will be set to blue. */
 ```
-### Explanation:
-* In this example, `.another-child` is nested within `.child`, but the `@at-root` directive moves it outside of `.parent` in the compiled CSS.
-* The compiled CSS would look like this:
-```css
-.parent {
-  color: blue;
-}
-
-.parent .child {
-  color: red;
-}
-
-.another-child {
-  color: green;
+### Adding @else if and @else
+You can extend the `@if` directive by adding `@else` if and `@else` blocks.
+```scss
+@if condition1 {
+    // Code to run if condition1 is true
+} @else if condition2 {
+    // Code to run if condition2 is true
+} @else {
+    // Code to run if none of the conditions are true
 }
 ```
+### Example of @else if and @else
+```scss	
+$theme : dark;
+
+@if $theme == light {
+    body {
+        background-color: white;
+        color: black;
+    }
+ } @else if $theme == dark {
+   body {
+     background-color: black;
+     color: white;
+   }
+ } @else {
+   body {
+     background-color: lightgray;
+     color: black;
+   }
+ }
+```
+In this example:
+
+* If `$theme` is `light`, the body will have a white background with black text.
+* If `$theme` is `dark`, the body will have a black background with white text.
+* If neither condition is `true`, it will default to a gray background with black text.
