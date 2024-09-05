@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@for $list from 1 through 5 {
+  .list-#{$list} {
+    width: 100px * $list;
+    background: darken(pink, $list * 10%);
+    padding: 10px * $list;
+  }
+}

@@ -1,6 +1,8 @@
 # Sass @if & @else Directives
 The `@if` and `@else` directives in Sass are used to control conditional logic within your stylesheets. These directives allow you to write code that behaves differently based on specific conditions.
 
+![Sass Control Directives](./assets/img/control-directives.png)
+
 ### Basic Syntax of @if
 The `@if` directive works similarly to conditionals in programming languages. It checks if a given condition is true, and if so, it executes the corresponding block of code.
 ```scss
