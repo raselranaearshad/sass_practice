@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
-@for $list from 1 through 5 {
-  .list-#{$list} {
-    width: 100px * $list;
-    background: darken(pink, $list * 10%);
-    padding: 10px * $list;
+// Sass @while Directive
+$var : 10;
+$f-size : 16px;
+
+@while $var <= 30 {
+  .box-#{$var} {
+    padding-left: 1px * $var;
+    font-size: $f-size;
   }
+  $var : $var + 10;
+  $f-size : $f-size + 2px;
 }
