@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Each Sass Directive
+@each $var in (normal, bold, italic) {
+  .text-#{$var} {
+    font-weight: $var;
+  }
+}
+
+// Multiple List each Directive
+$list : ((regular, normal, 10px), (emphasis, italic, 15px));
+
+@each $name, $style, $size in $list {
+  .font-#{$name} {
+    font-style: $style;
+    font-size: $size;
+  }
+}
+
+// @each Directive with Map
+$map : (normal: 16px, bold: 18px, italic: 20px);
+
+@each $f-style, $f-size in $map {
+ .#{$f-style}{
+   font-weight: $f-style;
+   font-size: $f-size;
+ } 
+}
